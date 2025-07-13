@@ -1,5 +1,7 @@
 # ChatSQL: A Natural Language Business Intelligence Chatbot
 
+**Live Demo: [https://chatsql-rifukawa.streamlit.app](https://chatsql-rifukawa.streamlit.app)**
+
 This project is a proof-of-concept web application that allows non-technical users to query a SQL database using plain English. It leverages the power of Large Language Models (LLMs) to bridge the gap between complex data systems and business stakeholders.
 
 <p align="center">
