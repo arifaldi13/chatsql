@@ -59,7 +59,7 @@ A transactional table that links customers and the products they purchased.
 This application is built using a modern, AI-native stack:
 
 - **AI Framework:** [LangChain](https://www.langchain.com/) (using the SQL Agent)
-- **LLM:** OpenAI's `text-davinci-003` (or the model you used)
+- **LLM:** OpenAI's `text-davinci-003`
 - **Database:** SQLite
 - **Backend/UI:** [Streamlit](https://streamlit.io/)
 - **Environment:** Anaconda / Python 3.x
