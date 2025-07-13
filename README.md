@@ -21,40 +21,6 @@ In many organizations, business intelligence is a bottleneck. Stakeholders need 
 - **Robust Agent Logic:** Uses a custom prompt to handle ambiguity and prevent database modification.
 - **Responsive UI:** Provides loading feedback and handles errors gracefully.
 
-## Database Schema
-
-The application connects to a simple SQLite database (`bi_database.db`) designed to mimic a basic e-commerce business. The schema consists of three tables:
-
-**1. `customers`**
-Stores information about each customer.
-
-| Column      | Type    | Description                      |
-|-------------|---------|----------------------------------|
-| `customer_id` | INTEGER | Primary Key for the customer.    |
-| `name`        | TEXT    | The full name of the customer.   |
-| `join_date`   | DATE    | The date the customer registered.|
-
-**2. `products`**
-Contains details for all available products.
-
-| Column         | Type    | Description                       |
-|----------------|---------|-----------------------------------|
-| `product_id`   | INTEGER | Primary Key for the product.      |
-| `product_name` | TEXT    | The name of the product.          |
-| `category`     | TEXT    | The category (e.g., 'Electronics'). |
-| `price`        | REAL    | The price of the product.         |
-
-**3. `orders`**
-A transactional table that links customers and the products they purchased.
-
-| Column      | Type    | Description                                  |
-|-------------|---------|----------------------------------------------|
-| `order_id`  | INTEGER | Primary Key for the order.                   |
-| `customer_id` | INTEGER | Foreign Key linking to the `customers` table. |
-| `product_id`  | INTEGER | Foreign Key linking to the `products` table.  |
-| `order_date`  | DATE    | The date the order was placed.               |
-| `quantity`    | INTEGER | The number of units of the product ordered.  |
-
 
 ## Tech Stack & Architecture
 

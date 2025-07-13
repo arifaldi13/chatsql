@@ -50,7 +50,7 @@ with st.sidebar:
     This chatbot is powered by LangChain and OpenAI to allow you to query a SQL database using natural language.
     """)
     st.markdown("---")
-    st.markdown("🔗 [View on GitHub](https://github.com/arifaldi13)")
+    st.markdown("🔗 [View on GitHub](https://github.com/arifaldi13/chatsql)")
 
 @st.cache_data
 def load_data():
