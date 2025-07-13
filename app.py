@@ -35,6 +35,12 @@ agent_executor = create_sql_agent(
     prefix=AGENT_PREFIX,
 )
 
+st.set_page_config(
+    page_title="ChatSQL",
+    page_icon="💬",
+    initial_sidebar_state="collapsed"
+)
+
 st.title("ChatSQL")
 st.write("Your Business Intelligence Chatbot. Ask me questions about your sales, customers, and products! Or try one of the suggestions below.")
 
