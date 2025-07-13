@@ -78,16 +78,16 @@ The architecture is straightforward: the Streamlit frontend captures user input 
 **Instructions:**
 1.  **Clone the repository:**
     ```bash
-    git clone [Your GitHub Repository URL]
-    cd chatsql_project
+    git clone https://github.com/arifaldi13/chatsql.git
+    cd chatsql
     ```
 2.  **Set up the Anaconda environment:**
     *(If you have an environment.yml file, provide instructions here. Otherwise, list the packages.)*
     ```bash
     # Example for manual installation:
-    conda create --name chatsql python=3.9
+    conda create --name chatsql
     conda activate chatsql
-    pip install streamlit langchain openai python-dotenv sqlalchemy
+    pip install streamlit langchain langchain-community openai pandas sqlalchemy
     ```
 3.  **Set up your API Key:**
     Create a `.env` file in the root directory and add your key:
