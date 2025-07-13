@@ -1,0 +1,11 @@
+# Environment files
+.env
+venv/
+__pycache__/
+.streamlit/
+Untitled.ipynb
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
