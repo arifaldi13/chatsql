@@ -49,7 +49,6 @@ The architecture is straightforward: the Streamlit frontend captures user input 
     ```
 2.  **Set up the Anaconda environment:**
     ```bash
-    # Example for manual installation:
     conda create --name chatsql
     conda activate chatsql
     pip install streamlit langchain langchain-community openai pandas sqlalchemy
