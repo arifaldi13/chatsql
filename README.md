@@ -2,15 +2,13 @@
 
 This project is a proof-of-concept web application that allows non-technical users to query a SQL database using plain English. It leverages the power of Large Language Models (LLMs) to bridge the gap between complex data systems and business stakeholders.
 
-**[Optional: Add a GIF or Screenshot of your app in action here. This is highly recommended!]**
+![Alt Text](showcase.gif)
 
----
 
 ## The Problem
 
 In many organizations, business intelligence is a bottleneck. Stakeholders need data to make decisions, but they must rely on data analysts to write custom SQL queries. This process can be slow and inefficient. ChatSQL is designed to solve this problem by providing a direct, conversational interface to the database.
 
----
 
 ## Features
 
@@ -19,9 +17,42 @@ In many organizations, business intelligence is a bottleneck. Stakeholders need 
 - **Robust Agent Logic:** Uses a custom prompt to handle ambiguity and prevent database modification.
 - **Responsive UI:** Provides loading feedback and handles errors gracefully.
 
----
+## Database Schema
 
-## 🛠Tech Stack & Architecture
+The application connects to a simple SQLite database (`bi_database.db`) designed to mimic a basic e-commerce business. The schema consists of three tables:
+
+**1. `customers`**
+Stores information about each customer.
+
+| Column      | Type    | Description                      |
+|-------------|---------|----------------------------------|
+| `customer_id` | INTEGER | Primary Key for the customer.    |
+| `name`        | TEXT    | The full name of the customer.   |
+| `join_date`   | DATE    | The date the customer registered.|
+
+**2. `products`**
+Contains details for all available products.
+
+| Column         | Type    | Description                       |
+|----------------|---------|-----------------------------------|
+| `product_id`   | INTEGER | Primary Key for the product.      |
+| `product_name` | TEXT    | The name of the product.          |
+| `category`     | TEXT    | The category (e.g., 'Electronics'). |
+| `price`        | REAL    | The price of the product.         |
+
+**3. `orders`**
+A transactional table that links customers and the products they purchased.
+
+| Column      | Type    | Description                                  |
+|-------------|---------|----------------------------------------------|
+| `order_id`  | INTEGER | Primary Key for the order.                   |
+| `customer_id` | INTEGER | Foreign Key linking to the `customers` table. |
+| `product_id`  | INTEGER | Foreign Key linking to the `products` table.  |
+| `order_date`  | DATE    | The date the order was placed.               |
+| `quantity`    | INTEGER | The number of units of the product ordered.  |
+
+
+## Tech Stack & Architecture
 
 This application is built using a modern, AI-native stack:
 
@@ -33,7 +64,6 @@ This application is built using a modern, AI-native stack:
 
 The architecture is straightforward: the Streamlit frontend captures user input and sends it to the LangChain SQL Agent. The agent uses an LLM to generate a SQL query, executes it against the SQLite database, and then uses the LLM again to formulate a final, human-readable answer.
 
----
 
 ## How to Run Locally
 
@@ -68,7 +98,6 @@ The architecture is straightforward: the Streamlit frontend captures user input 
     ```bash
     streamlit run app.py
     ```
----
 
 ## Security Considerations
 
