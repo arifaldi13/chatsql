@@ -48,7 +48,6 @@ The architecture is straightforward: the Streamlit frontend captures user input 
     cd chatsql
     ```
 2.  **Set up the Anaconda environment:**
-    *(If you have an environment.yml file, provide instructions here. Otherwise, list the packages.)*
     ```bash
     # Example for manual installation:
     conda create --name chatsql
