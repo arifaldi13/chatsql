@@ -2,7 +2,9 @@
 
 This project is a proof-of-concept web application that allows non-technical users to query a SQL database using plain English. It leverages the power of Large Language Models (LLMs) to bridge the gap between complex data systems and business stakeholders.
 
-![Alt Text](showcase.gif)
+<p align="center">
+  <img src="showcase.gif" />
+</p>
 
 
 ## The Problem
