@@ -58,11 +58,7 @@ The architecture is straightforward: the Streamlit frontend captures user input 
     ```
     OPENAI_API_KEY="sk-..."
     ```
-4.  **Create and populate the database:**
-    *(You used a Jupyter Notebook, so explain that here.)*
-    - Open `database_setup.ipynb` and run all cells to create and populate `bi_database.db`.
-
-5.  **Launch the application:**
+4.  **Launch the application:**
     ```bash
     streamlit run app.py
     ```
