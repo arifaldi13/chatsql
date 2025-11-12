@@ -1,6 +1,7 @@
 streamlit
 langchain
 langchain-community
+langchain_openai
 openai
 SQLAlchemy
 pandas
