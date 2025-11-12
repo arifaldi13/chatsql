@@ -3,9 +3,11 @@ import pandas as pd
 import streamlit as st
 #from langchain.llms.openai import OpenAI
 from langchain_openai import OpenAI
-from langchain.sql_database import SQLDatabase
+#from langchain.sql_database import SQLDatabase
+from langchain_community.utilities import SQLDatabase
 from langchain.agents import create_sql_agent
-from langchain.agents.agent_toolkits import SQLDatabaseToolkit
+#from langchain.agents.agent_toolkits import SQLDatabaseToolkit
+from langchain_community.agent_toolkits import SQLDatabaseToolkit
 from langchain.agents.agent_types import AgentType
 
 AGENT_PREFIX = """
